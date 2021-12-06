@@ -6157,7 +6157,7 @@ xeon.sendMessage(from, stdout, text, term)
     if (isGroup && budy != undefined) {
     } else {
       console.log(
-        color("[Doge Bot]", "red"),
+        color("[Rio Bot]", "red"),
         "💌HINDI SMS BOT💌",
         color(sender.split("@")[0])
       );
