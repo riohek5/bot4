@@ -3208,7 +3208,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 			if (!isGroupAdmins) return sticAdmin(from)
 			if (!isBotGroupAdmins) return sticNotAdmin(from)
 			if (args.length < 1) return reply('do you want to add a genie?')
-					if (args[0].startsWith('')) return reply('use the country code')
+					if (args[0].startsWith('+')) return reply('use the country code')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						xeon.groupAdd(from, [num])
