@@ -141,7 +141,7 @@ autoketik = false;
 prefixStatus = false;
 targetpc = "918007502988"; 
 owner = "918007502988"; 
-fakeyoi = "💌HINDI SMS BOT💌"; 
+fakeyoi = "Xeon"; 
 HunterApi = "Ikyy69", 
 xchillds = 'XChillDs' 
 hardi = 'hardianto', 
@@ -1311,9 +1311,315 @@ await xeon.setStatus(`Bot Mode On Since ${uptime}`).catch((_) => _);
     }
     if (!mek.key.fromMe && banChats === true) return;
 switch (command) {
+case 'verify':
+              
+if (isRegistered) return reply('Your account is verified')
+const serialUser = createSerial(18)
+	         try {
+								ppimg = await xeon.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+								} catch {
+								ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+							}
+	        veri = sender
+	        _registered.push(sender)
+	        fs.writeFileSync('./database/user/registered.json', JSON.stringify(_registered))
+	        addRegisteredUser(sender, serialUser)
+	         const anuu = `「 *USER REGISTRATION* 」
+*Thank you for registering in the 💌HINDI SMS BOT💌 Database*
 
+*☂︎ Name :* ${pushname}
+*☂︎ API :* +${sender.split('@')[0]}
+*☂︎ Serial:* ${serialUser}
+*☂ ︎Total:* ${_registered.length} User
+
+*「 💌HINDI SMS BOT💌 」*`
+         haitod = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${_registered.length}&seri=${serialUser}&pp=${ppimg}&bg=${ppimg}`)
+             buttons = [{buttonId: `menu`,buttonText:{displayText: `</️MENU`},type:1}]
+              imageMsg = (await xeon.prepareMessageMedia(haitod, "imageMessage", { thumbnail: haitod, })).imageMessage
+              buttonsMessage = {footerText:'Xeon', imageMessage: imageMsg,
+              contentText:`${anuu}`,buttons,headerType:4}
+              prep = await xeon.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
+              xeon.relayWAMessage(prep)
+	         console.log(color('[REGISTER]'), color(time, 'yellow'), 'Serial:', color(serialUser, 'cyan'), 'in', color(sender || groupName))
+	    // console.log(e)
+            setTimeout( () => {
+			xeon.updatePresence(from, Presence.composing)
+			reply(`*Thank you for being registered 💌HINDI SMS BOT💌*`)
+		}, 2000)
+        break
       
+case 'help':
+case 'menu':
+groups = xeon.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = xeon.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+           
+              uptime = process.uptime();
+              timestampe = speed();
+              totalChat = await xeon.chats.all()
+              latensie = speed() - timestampe
+              total = math(`${groups.length}*${privat.length}`)
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
+       txtt =`Hi ${pushname} 👋\n\nIF YOU ARE USING MOD WHATSAPP & BUTTONS DOESNT SHOW, TYPE #allmenu`
 
+               buttons = [{buttonId:`allmenu`, 
+               buttonText:{displayText: 'MENU🐶'},type:1},
+               {buttonId:`owner`,buttonText:{displayText:'CREATOR🐶'},type:1},
+               {buttonId:`command`,buttonText:{displayText:'LIST MENU🐶'},type:1}]
+
+
+               imageMsg = (await xeon.prepareMessageMedia(fs.readFileSync(`./stik/oksip.jpeg`), 'imageMessage', {thumbnail: fs.readFileSync(`./stik/oksip.jpeg`)})).imageMessage
+
+               buttonsMessage = {
+               contentText: `${txtt}`,
+               footerText: `シ︎ 𝙎𝙩𝙖𝙩𝙪𝙨 シ︎
+               
+ 𝐆𝐫𝐨𝐮𝐩 𝐂𝐡𝐚𝐭𝐬 : ${groups.length} 
+ 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
+ 𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
+ 𝐒𝐩𝐞𝐞𝐝 : ${latensie.toFixed(4)} _Second_
+ 𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
+ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${os.platform()}`, imageMessage: imageMsg,
+               buttons: buttons,
+               headerType: 4
+}
+prep = await xeon.prepareMessageFromContent(from,{buttonsMessage},{quoted: fkontak})
+               xeon.relayWAMessage(prep)
+             
+               break
+
+        case 'allmenu':
+        case 'xeon':
+groups = xeon.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = xeon.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+           
+              uptime = process.uptime();
+              timestampe = speed();
+              totalChat = await xeon.chats.all()
+              latensie = speed() - timestampe
+              total = math(`${groups.length}*${privat.length}`)
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
+        ptod = "918007502988@s.whatsapp.net"
+        dtod = '918007502988'
+        stod = `${sender}`
+        uwuu = '```'
+        yoii = '*'
+       stst = await xeon.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       menu = `
+🐶 Hi @${sender.split("@")[0]}
+
+シ︎ 𝐆𝐫𝐨𝐮𝐩 𝐂𝐡𝐚𝐭𝐬 : ${groups.length} 
+シ︎ 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
+シ︎ 𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
+シ︎ 𝐒𝐩𝐞𝐞𝐝 : ${latensie.toFixed(4)} _Second_
+シ︎ 𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
+シ︎ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${os.platform()}
+${readmore}
+ 
+ ⬣ 𝙊𝙒𝙉𝙀𝙍 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}off
+> ⬡ ${prefix}isbaileys
+> ⬡ ${prefix}banchat
+> ⬡ ${prefix}unbanchat
+> ⬡ ${prefix}listbc
+> ⬡ ${prefix}setcmd
+> ⬡ ${prefix}delcmd
+> ⬡ ${prefix}listcmd
+> ⬡ ${prefix}restart
+> ⬡ ${prefix}antidelete on|off
+> ⬡ ${prefix}autotype on|off
+> ⬡ ${prefix}autoread gc in / gc off
+> ⬡ ${prefix}autovn on|off
+> ⬡ ${prefix}anticall on|off
+> ⬡ ${prefix}getcaption
+> ⬡ ${prefix}bugcatalog
+> ⬡ ${prefix}buggc id grup
+> ⬡ ${prefix}okvirtex
+> ⬡ ${prefix}on
+> ⬡ ${prefix}status
+> ⬡ ${prefix}setthumb
+> ⬡ ${prefix}settarget
+> ⬡ ${prefix}setfakeimg
+> ⬡ ${prefix}setreply
+> ⬡ ${prefix}hacked name
+> ⬡ ${prefix}setprefix
+> ⬡ ${prefix}mode /public-self/
+> ⬡ ${prefix}term <code>
+> ⬡ ${prefix}eval <code>
+> ⬡ ${prefix}colongsw reply
+ > ⬡ ${prefix}addvn <reply audio with name>
+ > ⬡ ${prefix}delvn <audio name>
+ > ⬡ ${prefix}vnlist
+ > ⬡ ${prefix}addsticker <reply sticker with name>
+ > ⬡ ${prefix}delsticker <sticker name>
+ > ⬡ ${prefix}stickerlist
+ > ⬡ ${prefix}addimage <reply image with name>
+ > ⬡ ${prefix}delimage <image name>
+ > ⬡ ${prefix}imagelist
+  > ⬡ ${prefix}bc
+
+
+ ⬣ 𝙂𝙍𝙊𝙐𝙋 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}grup 
+> ⬡ ${prefix}promote 
+> ⬡ ${prefix}demote 
+> ⬡ ${prefix}setdesc
+> ⬡ ${prefix}setname
+> ⬡ ${prefix}nsfw 1/0
+> ⬡ ${prefix}kick 
+> ⬡ ${prefix}add 
+> ⬡ ${prefix}getbio
+> ⬡ ${prefix}getname 
+> ⬡ ${prefix}reminder 
+> ⬡ ${prefix}listonline
+> ⬡ ${prefix}sider reply
+> ⬡ ${prefix}antilink on|off
+> ⬡ ${prefix}tod
+> ⬡ ${prefix}tospam amount
+> ⬡ ${prefix}antivirtex on|off
+> ⬡ ${prefix}autojoin on|off
+> ⬡ ${prefix}kickarea
+> ⬡ ${prefix}grouplink
+> ⬡ ${prefix}resetlink
+> ⬡ ${prefix}group [open/close(button)]
+ 
+
+ ⬣ 𝙈𝘼𝙆𝙄𝙉𝙂 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}sticker
+> ⬡ ${prefix}swm author|packname
+> ⬡ ${prefix}take author|packname
+> ⬡ ${prefix}fdeface
+> ⬡ ${prefix}emoji
+> ⬡ ${prefix}golden text
+> ⬡ ${prefix}flower text
+> ⬡ ${prefix}wooden text
+> ⬡ ${prefix}burn text
+> ⬡ ${prefix}glow text
+> ⬡ ${prefix}summer text
+> ⬡ ${prefix}neon text
+> ⬡ ${prefix}coffeecup text
+> ⬡ ${prefix}coffeecup2 text
+> ⬡ ${prefix}battlefield text|text
+> ⬡ ${prefix}googletxt2 text|text
+> ⬡ ${prefix}transformer text|text
+> ⬡ ${prefix}write text
+> ⬡ ${prefix}waifu
+> ⬡ ${prefix}phlogo text|*text
+> ⬡ ${prefix}tfire text
+> ⬡ ${prefix}phcomment text|text
+> ⬡ ${prefix}wolf text
+> ⬡ ${prefix}ytgol text
+> ⬡ ${prefix}ytsilver text
+> ⬡ ${prefix}t3d text
+> ⬡ ${prefix}logoa text|text
+> ⬡ ${prefix}marvel text|text
+> ⬡ ${prefix}leavest text
+> ⬡ ${prefix}neon2 text
+> ⬡ ${prefix}wall text
+> ⬡ ${prefix}notewrite text
+> ⬡ ${prefix}pubglogo text|text
+
+ 
+ ⬣ 𝘾𝙊𝙉𝙑𝙀𝙍𝙏 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}tomp3
+> ⬡ ${prefix}tomp4
+> ⬡ ${prefix}toimg
+> ⬡ ${prefix}slow
+> ⬡ ${prefix}fast
+> ⬡ ${prefix}reverse
+> ⬡ ${prefix}tourl
+
+
+ ⬣ 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}play query
+> ⬡ ${prefix}play2 query
+> ⬡ ${prefix}playv2 link
+> ⬡ ${prefix}playm2 link
+> ⬡ ${prefix}song query
+> ⬡ ${prefix}video query
+> ⬡ ${prefix}instagram link
+> ⬡ ${prefix}twitter
+> ⬡ ${prefix}facebook link
+> ⬡ ${prefix}tiktok link
+> ⬡ ${prefix}tiktokmp3 link
+> ⬡ ${prefix}ytmp3 link
+> ⬡ ${prefix}ytmp4 link
+ 
+
+ ⬣ 𝙏𝘼𝙂 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}hidetag
+> ⬡ ${prefix}contag
+> ⬡ ${prefix}sticktag
+> ⬡ ${prefix}totag
+ 
+
+ ⬣ 𝙐𝙋𝙎𝙒 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}upswtxt
+> ⬡ ${prefix}upswlocation
+> ⬡ ${prefix}upswsticker
+> ⬡ ${prefix}upswimage
+> ⬡ ${prefix}upswvideo
+> ⬡ ${prefix}upswgif
+ 
+
+ ⬣ 𝙁𝙐𝙉 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}slander
+> ⬡ ${prefix}slanderpc
+> ⬡ ${prefix}contact 0|p
+> ⬡ ${prefix}suit
+> ⬡ ${prefix}toxic
+> ⬡ ${prefix}dice
+> ⬡ ${prefix}intake
+> ⬡ ${prefix}viewonce
+> ⬡ ${prefix}hbd
+> ⬡ ${prefix}herodetail hero name
+> ⬡ ${prefix}herolist hero name
+> ⬡ ${prefix}beautycheck @tag
+> ⬡ ${prefix}uglycheck @tag
+> ⬡ ${prefix}handsomecheck @tag
+> ⬡ ${prefix}lesbicheck @tag
+> ⬡ ${prefix}character @tag
+> ⬡ ${prefix}gaycheck @tag
+> ⬡ ${prefix}is
+> ⬡ ${prefix}can
+> ⬡ ${prefix}rate
+> ⬡ ${prefix}when
+> ⬡ ${prefix}couple
+> ⬡ ${prefix}handsome
+> ⬡ ${prefix}pretty
+
+
+ ⬣ 𝙉𝙎𝙁𝙒 𝙁𝙀𝘼𝙏𝙐𝙍𝙀𝙎
+> ⬡ ${prefix}yuri
+> ⬡ ${prefix}hentai
+> ⬡ ${prefix}anal
+> ⬡ ${prefix}eroneko
+> ⬡ ${prefix}lesbian
+> ⬡ ${prefix}kitsune
+> ⬡ ${prefix}bj
+> ⬡ ${prefix}pussy
+> ⬡ ${prefix}wallpaper
+> ⬡ ${prefix}neko2
+> ⬡ ${prefix}baka
+> ⬡ ${prefix}slap
+> ⬡ ${prefix}poke
+> ⬡ ${prefix}keta
+> ⬡ ${prefix}awoo
+> ⬡ ${prefix}blowjob
+> ⬡ ${prefix}megumin
+> ⬡ ${prefix}neko
+> ⬡ ${prefix}trapnime
+
+𝗡𝗼𝘁𝗲 : Horny = Bonks💥
+Just Learn to Make Bots 🐶
+ 
+𝘼𝙈 𝙉𝙊𝙏 𝘼 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙀𝙍 𝘽𝙍𝙊
+`
+sendButLocation(from, `${menu}`,`𝘽𝙤𝙩 𝘽𝙮 @${dtod.split("@")[0]}`, {jpegThumbnail:iye}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`credit`,buttonText:{displayText:'THANKS TO'},type:1},{buttonId:`script`,buttonText:{displayText:'SCRIPT'},type:1}], {contextInfo: { mentionedJid: [ptod,stod]}})
+
+break
 case 'credit':
    dtod = '918007502988'
    dtod1 = '918007502988'
@@ -2137,7 +2443,7 @@ case 'triggered':
 case 'script':
 		case 'sc':
 		case 'sourcecode':
-		xeon.sendMessage(from, { text: "https://chat.whatsapp.com/GvIHbyJv8bA50WLoqoe7rM", matchedText: 'nopee', description: "", title: "What are you doing?", jpegThumbnail: iye }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: finv})
+		xeon.sendMessage(from, { text: "https://www.instagram.com/rio.riyaz1", matchedText: 'nopee', description: "", title: "What are you doing?", jpegThumbnail: iye }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: finv})
 		break
       //------------------< Sticker Cmd >-------------------
       case "addcmd":
@@ -2311,7 +2617,8 @@ nm = body.slice(7)
 					break
 					case 'vnlist':
 				case 'listvn':
-teks = '*VN List :*\n\n'
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fkontak})
+					teks = '*VN List :*\n\n'
 					for (let awokwkwk of vien) {
 						teks += `- ${awokwkwk}\n`
 					}
@@ -2471,7 +2778,7 @@ break
 					//extra features
 					case "pubglogo":
        
-				if (args.length < 1) return reply(`Where is the text?\n*Example ${prefix}pubglogo Doge|Bot`)
+				if (args.length < 1) return reply(`Where is the text?\n*Example ${prefix}pubglogo Rio|Riyaz`)
 				reply('Wait!')
      ct = body.slice(9)
      memek1 = ct.split("|")[0];
@@ -3617,7 +3924,7 @@ case 'hacked':
                 await sleep(1000)
                 xeon.sendMessage(from, 'Succes Hacked', text, {quoted: fyt})
 case 'mygithub':
-  reply('https://chat.whatsapp.com/GvvIHbyJv8bA50WLoqoe7rM')
+  reply('https://github.com/DGXeon')
 					break;
    case 'ss':
       reply(mess.wait)
@@ -3892,7 +4199,7 @@ case 'debug2':
       {
         "urlButton": {
           "displayText": `Script ${fakeyoi}`,
-          "url": "https://chat.whatsapp.com/GvIHbyJv8bA50WLoqoe7rM"
+          "url": "https://www.instagram.com/rio.riyaz1"
         },
         "index": 0
       }
@@ -4593,7 +4900,7 @@ case 'nsfw':
 					xeon.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: fs.readFileSync('./xeon.jpg')})
 					break
 			case 'battlefield': 
-                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Xeon|Doge`)
+                    if (args.length < 1) return reply(`*Example :*\n${prefix}${command} Rio|Riyaz`)
 					makell = args.join(" ")
 					ll1 = makell.split("|")[0];
 					ll2 = makell.split("|")[1];
