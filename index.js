@@ -141,7 +141,7 @@ autoketik = false;
 prefixStatus = false;
 targetpc = "918007502988"; 
 owner = "918007502988"; 
-fakeyoi = "Xeon"; 
+fakeyoi = "💌HINDI SMS BOT💌"; 
 HunterApi = "Ikyy69", 
 xchillds = 'XChillDs' 
 hardi = 'hardianto', 
@@ -3924,7 +3924,7 @@ case 'hacked':
                 await sleep(1000)
                 xeon.sendMessage(from, 'Succes Hacked', text, {quoted: fyt})
 case 'mygithub':
-  reply('https://github.com/DGXeon')
+  reply('https://www.instagram.com/rio.riyaz1')
 					break;
    case 'ss':
       reply(mess.wait)
