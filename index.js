@@ -3774,7 +3774,7 @@ break
             var nomor = pc.split("|")[0];
             var org = pc.split("|")[1];
             xeon.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
-            reply(`Sukses mengirim chat:\n${org},@${nomor}`)
+            reply(`Successful Sending Chat: \n${org},@${nomor}`)
             break
 case 'viewonce':
 res = await xeon.prepareMessageFromContent(from,{
