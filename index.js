@@ -1505,12 +1505,12 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
 					const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 					buff = await xeon.downloadMediaMessage(encmedia)
 					for (let _ of anu) {
-						xeon.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `「  *💌HINDI SMS BOT💌 BROADCAST* 」\n\n${ini_bc}`})
+						xeon.sendMessage(_.jid, buff, image, {quoted:fakestatus ,caption: `${ini_bc}`})
 					}
 					reply('```Success Broadcast```')
 					} else {
 					for (let _ of anu) {
-					xeon.sendMessage(_.jid, `*💌HINDI SMS BOT💌 BROADCAST*\n${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+					xeon.sendMessage(_.jid, `${ini_bc}`, text, { contextInfo: { mentionedJid: [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 					}
 					reply('```Success Broadcast```')
 					}
